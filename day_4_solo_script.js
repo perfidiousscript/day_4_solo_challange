@@ -40,7 +40,7 @@ for(var i = 0; i < array.length; i++){
   
 	array[i] = calculateSTI(array[i]);
  	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
+	newText = document.createTextNode(array[i].name + " " + array[i].bonusPercentage + " " +  array[i].Total + " " +  array[i].bonus);
 	newEl.appendChild(newText);
 	position.appendChild(newEl);
 }
@@ -61,7 +61,7 @@ function calculateSTI(object){
   
   newObject.bonusPercentage = bonus;
 
-  newObject.Total = baseSalary * (1.0 + bonus).toFixed(2);
+  newObject.Total = (baseSalary * (1.0 + bonus)).toFixed(2);
 
 
   newObject.bonus = baseSalary * bonus;
@@ -69,6 +69,7 @@ function calculateSTI(object){
 //console.log(newArray);
 
   
+  console.log(newObject);
   return newObject;
 }
 

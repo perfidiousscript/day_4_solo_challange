@@ -1,3 +1,6 @@
+//Arrays converted to objects,
+//returns an object and applys them to the html.
+
 
 var objAtticus = {
   name: "Atticus",
@@ -34,8 +37,6 @@ var newEl, newText, position;
 //Capture the position of insertion into the DOM
 position = document.getElementById('content');
 
-//Loop the array, extracting each array and writing information to the DOM
-//Note that the information is not 'clean'
 for(var i = 0; i < array.length; i++){
   
 	array[i] = calculateSTI(array[i]);
